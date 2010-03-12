@@ -183,5 +183,6 @@ So rather than displaying the Kohana error page with the stack trace, it will di
 
 Keep in mind what I said earlier though: **your application should never have any uncaught exceptions**, so this should no be necesarry, though it is a good idea, simply because stack traces on a production environment are a bad idea.
 
+[!!] Next article:  [Routing](kohana301.routing)
 
 [github/kohanaphp.com]: http://github.com/isaiahdw/kohanaphp.com/blob/f2afe8e28b22b93527b2aa94032abda8447274e5/application/bootstrap.php
