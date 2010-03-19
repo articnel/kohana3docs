@@ -168,21 +168,48 @@ echo $request->response;
 
 ##### Last thoughts
 
-In production, **your application should never have any uncaught exceptions**, as this can expose sensitive information.  In the previous example we make the assumption that there is actually a view called 'views/errors/404', which is fairly safe to assume.  If you want, you can turn 'errors' off in Kohana::init to display the normal php errors.
+In production, **your application should never have any uncaught exceptions**, as this can expose sensitive information (via the stack trace).  In the previous example we make the assumption that there is actually a view called 'views/errors/404', which is fairly safe to assume.  One solution is to turn 'errors' off in Kohana::init for your production machine, so it displays the normal php errors rather than a stack trace.
 
 ~~~
+// snippet from bootstrap.php 
 Kohana::init(array('
     ...
     'errors' => false,
 ));
 ~~~
 
-So rather than displaying the Kohana error page with the stack trace, it will display:
+So rather than displaying the Kohana error page with the stack trace, it will display the default php error. Something like:
 
 **Fatal error: Uncaught Kohana_View_Exception [ 0 ]: The requested view errors/404 could not be found ~ SYSPATH/classes/kohana/view.php [ 215 ] thrown in /var/www/kohanut/docs.kohanaphp.com/3.0/system/classes/kohana/view.php on line 215**
 
-Keep in mind what I said earlier though: **your application should never have any uncaught exceptions**, so this should no be necesarry, though it is a good idea, simply because stack traces on a production environment are a bad idea.
+Keep in mind what I said earlier though: **your application should never have any uncaught exceptions**, so this should not be necesarry, though it is a good idea, simply because stack traces on a production environment are a *very* bad idea.
 
-[!!] Next article:  [Routing](kohana301.routing)
+Another solution is to always have a `catch` statement that can't fail, something like an `echo` and an `exit` or a `die()`.  This should almost never be necesarry, but it makes some people feel better at night.  You can either wrap your entire bootstrap in a try catch, or simply wrap the contents of the catch in another try catch.  For example:
+
+~~~
+try
+{
+	// Execute the main request
+	$request->execute();
+}
+catch (Exception $e)
+{
+	try
+	{
+		// Be sure to log the error
+		Kohana::$log->add(Kohana::ERROR, Kohana::exception_text($e));
+		
+		// If there was an error, send a 404 response and display an error
+		$request->status   = 404;
+		$request->response = View::factory('errors/404');
+	}
+	catch
+	{
+		// This is completely overkill, but helps some people sleep at night
+		echo "Something went terribly wrong. Try again in a few minutes.";
+		exit;
+	}
+}
+~~~
 
 [github/kohanaphp.com]: http://github.com/isaiahdw/kohanaphp.com/blob/f2afe8e28b22b93527b2aa94032abda8447274e5/application/bootstrap.php

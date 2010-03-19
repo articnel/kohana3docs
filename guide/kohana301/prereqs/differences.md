@@ -1,8 +1,8 @@
 # Differences Between Kohana 2 and Kohana 3
 
-This is not meant to be a "how to upgrade" or even a list of "gotchas" you should now about when upgrading.  It's meant to be an **objective look at the differences between the two versions**.
+This is not meant to be a "how to upgrade" or even a list of "gotchas" you should now about when upgrading.  It's meant to be an **objective look at the differences between the two versions**, specifically between 2.4 and 3.0.
 
-Kohana 2.4 is the continuation of the 2.x branch, which was originally based on Code Ignitor.  Kohana 3.x is *essentially* a rewrite of the framework.  However, they still have **alot** of overlap &mdash; not just the fact that they both have the same goals of being a lightweight, secure, flexible PHP 5 frameworks &mdash; including the I18n, Configuration, Logging, Database and ORM.  Kohana 3 modules can easily be used in 2.4 with little to no modification.
+Kohana 2.4 is the continuation of the 2.x branch, which was originally based on Code Ignitor.  Kohana 3.x is *essentially* a rewrite of the framework.  However, they still have **a lot** of overlap &mdash; not just the fact that they both have the same goals of being a lightweight, secure, flexible PHP 5 frameworks &mdash; including the I18n, Configuration, Logging, Database and ORM.  Kohana 3 modules can easily be used in 2.4 with little to no modification. \[TODO: source? example? ]
 
 Kohana 2.4 and 3.x are fairly similar, however there are a couple differences, which I will attempt to outline here.
 

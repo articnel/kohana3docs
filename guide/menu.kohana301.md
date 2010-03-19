@@ -1,15 +1,13 @@
-### Kohana 301
-
-1. [Introduction](kohana301.intro)
-2. **[Pre-requisites](kohana.prereqs)**
-    - [PHP5 and OOP](kohana301.php5oop)
-    - [Model View Controller](kohana301.mvc)
-    - [Cascading Filesystem](kohana301.cascade)
-    - [Differences from Kohana 2](kohana301.differences)
-3. **First Semester**
-    - [The Bootstrap](kohana301.bootstrap)
-    - [Routing](kohana301.routing)
-4. **Testing Many Levels**
+### [Kohana 301](kohana301)
+1. **[Pre-requisites](kohana301/prereqs)**
+    - [PHP5 and OOP](kohana301/prereqs/php5oop)
+    - [Model View Controller](kohana301/prereqs/mvc)
+    - [Differences from Kohana 2](kohana301/prereqs/differences)
+2. **[Basics](kohana301/basics)**
+    - [Cascading Filesystem](kohana301/basics/cascade)
+    - [The Bootstrap](kohana301/basics/bootstrap)
+    - [Routing](kohana301/basics/routing)
+154312432141243. **Testing Many Levels**
     - **1**
         - **[PHP5 and OOP](kohana301.php5oop)**
             - 1.1.1
