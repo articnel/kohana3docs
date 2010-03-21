@@ -10,6 +10,8 @@ Kohana 2.4 and 3.x are fairly similar, however there are a couple differences, w
 
 ## File Structure / Naming Conventions
 
+The file structure is one of the biggest changes in Kohana 3.  The Filestructure was completely revamped to allow better autoloading and namespacing.
+
 ### Kohana 2.x
 
 In 2.x the "type" of file was typically a suffix, such as `User_Controller` or `User_Model`, and each type of class had its own folder, i.e `application/controllers` and `application/models` and `application/libraries`.  Classes in subfolders (other than controllers) had to be included with a call to Kohana::find_file() prior to use. 

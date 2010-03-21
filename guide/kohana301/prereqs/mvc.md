@@ -1,6 +1,12 @@
 # Model View Controller
 
+Hopefully you have some experience with MVC.  If not, this will attempt to introduce you to it.
+
 Model View Controller is a architectural pattern used in programming that helps to seperate presentation (view) from application logic (controller) and business logic (model).
+
+**Views** should contain all of your markup.  Your controller's and model's should not typically contain any `echo` statements or any HTML markup.  An exception to this would be debugging your code.
+
+
 
 Almost all HTML should be in your views, almost all interaction with the database should be in your models, and the application logic is in your controllers.
 
@@ -14,4 +20,18 @@ This is a saying that many MVC and Kohana users say.  In essence it means your m
 
 ## Examples of "Doing It Wrong"
 
-\[TODO: need some examples]
+~~~
+public function action_index()
+{
+	// Bad! This should be in the view
+	echo '<h1>Welcome to our site!</h1>';
+	
+	// Bad! Don't have html in your controller
+	$error = '<div class="error">Not found</div>';
+	
+	// Good. Just pass the error to the view, and let it render it.
+	$this->request->response = View::factory('foobar',array('error'='Not found'));
+	
+	// Acceptable, but only as if used temporarily for debugging
+	echo Kohana::debug($foo);
+~~~
