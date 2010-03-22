@@ -18,6 +18,8 @@ In fact, even if you know the answer, sometimes it's nice to go and review this 
 
 *  What is the ternary operator? [power (pdf) p. 39][power], [php.net][php.ternary]
 
+*  What is type hinting? [php.net][php.typehinting]
+
 ##### Objects/Classes
 
 *  In a class, what is the difference between `public`, `private` and `protected`?  [php.net][php.visibility]
@@ -65,3 +67,4 @@ In fact, even if you know the answer, sometimes it's nice to go and review this 
 [php.comparisontable]: http://www.php.net/manual/en/types.comparisons.php
 [php.silence]: http://www.php.net/manual/en/language.operators.errorcontrol.php
 [php.ternary]: http://php.net/manual/en/language.operators.comparison.php#language.operators.comparison.ternary
+[php.typehinting]: http://php.net/manual/en/language.oop5.typehinting.php

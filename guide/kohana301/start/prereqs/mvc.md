@@ -32,6 +32,6 @@ public function action_index()
 	// Good. Just pass the error to the view, and let it render it.
 	$this->request->response = View::factory('foobar',array('error'='Not found'));
 	
-	// Acceptable, but only as if used temporarily for debugging
+	// Only use temporarily for debugging
 	echo Kohana::debug($foo);
 ~~~
