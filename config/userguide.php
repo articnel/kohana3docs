@@ -1,19 +1,20 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 return array(
+	// Don't touch this :)
 	'userguide' => array(
 		
 		// This should be the path to your userguide pages
-		'kohana301' => array(
+		'kohana3' => array(
 			
 			// The name that should show up on the userguide index page
-			'name'  => 'Kohana 301',
+			'name'  => 'Kohana 3',
 			
 			// A short description of this module
-			'desc'  => 'A beginners guide to Kohana 3.',
+			'desc'  => 'Documentation for Kohana 3.',
 			
 			// Where is the menu page for this page? WITHOUT 'guide/' at the beggining or '.md' at the end
-			'menu'  => 'kohana301/menu',
+			'menu'  => 'kohana3/menu',
 		)	
 	)
 );

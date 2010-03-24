@@ -4,17 +4,15 @@ In order to produce highly consistent source code, we ask that everyone follow t
 
 [!!] Most of the article was taken from [here](http://dev.kohanaphp.com/wiki/kohana2/CodingStyle), some modifications were made to make it apply to Kohana 3.
 
-## Brackets
+## Summary
 
-Please use [BSD/Allman Style](http://en.wikipedia.org/wiki/Indent_style#BSD.2FAllman_style) bracketing.  This means that brackets are on their own line.
+This is a brief summary of some of the conventions on this page.
 
-	<?php
-	
-	if ( $x == $y )
-	{
-		foo();
-		bar();
-	}
+*  Use `under_score` naming not `camelCase` for classes, functions and variables.
+*  Brackets go on their own line.
+*  Don't put spaces around `.` (dot) when concatenating.
+*  Always put spaces around `!` (bang).
+*  One-line comments should use `//` a space, and begin with a capitol letter.
 
 ## Naming Conventions
 
@@ -49,7 +47,7 @@ When creating an instance of a class, don't use parentheses if you're not passin
 
 #### Functions and Methods
 
-Functions should be all lowercase, and use under_scores to seperate words:
+Functions should be all lowercase, and use under_scores to separate words:
 
 	<?php
 	
@@ -69,7 +67,26 @@ All variables should be lowercase and use under_score, not camelCase:
 	// Incorrect:
 	$weDontWantThis = 'understood?';
 
-## Identation
+## Brackets
+
+Please use [BSD/Allman Style](http://en.wikipedia.org/wiki/Indent_style#BSD.2FAllman_style) bracketing.  This means that brackets are on their own line.
+
+	<?php
+	
+	if ( $x == $y )
+	{
+		foo();
+		bar();
+	}
+
+The exception to this is Class declarations, which should have the bracket on the same line.
+
+	<?php
+	
+	Class Foo_Bar {
+
+
+## Indentation
 
 You must use tabs to indent your code. Using spaces for tabbing is strictly forbidden.
 
@@ -165,7 +182,7 @@ Each `case`, `break` and `default` should be on a separate line. The block insid
 
 ## Parentheses
 
-There should be one space after statement name, followed by a parenthesis. The `!` (bang) character must have a space on either side to ensure maximum readability. Except in the case of a bang or type casting, there should be no whitespace after an opening parenthesis or before a closing parenthesis.
+There should be one space after statement name, followed by a parenthesis. The `!` (bang) character must have a space on either side to ensure maximum readability. Except in the case of a bang or type casting, there should be no white space after an opening parenthesis or before a closing parenthesis.
 
 	<?php
 	

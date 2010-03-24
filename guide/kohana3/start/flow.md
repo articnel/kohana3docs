@@ -1,7 +1,5 @@
 # Request Flow
 
-# Request Flow
-
 Every application follows the same flow:
 
 1. Application starts from `index.php`
